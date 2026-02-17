@@ -43,11 +43,11 @@ function playRound (humanChoice, computerChoice) {
 
   if(humanChoice === "paper"){
     if(computerChoice === "rock"){
-      computerScore++;
+      humanScore++;
       return "You win! Paper covers Rock!!"
     }else {
       if(computerChoice === "scissors"){
-        humanScore++;
+        computerScore++;
         return "You lose! Scissors cuts Paper!"
       }
     }
@@ -74,5 +74,15 @@ function playGame(){
     const computerSelection = getComputerChoice();
     console.log(playRound(humanSelection, computerSelection));
   }
-  
+
+  if(humanScore > computerScore ){
+    console.log("You win!");
+  } else if(computerScore > humanScore){
+    console.log("You lose!");
+  }else{
+    console.log("That was a tie!");
+  }
+
 }
+
+playGame();
