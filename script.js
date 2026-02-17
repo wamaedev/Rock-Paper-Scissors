@@ -75,12 +75,14 @@ function playGame(){
     console.log(playRound(humanSelection, computerSelection));
   }
 
+  console.log("\n=== GAME OVER ===");
+
   if(humanScore > computerScore ){
-    console.log("You win!");
+    console.log(`🎉 You win the game! Final score: ${humanScore} - ${computerScore}`);
   } else if(computerScore > humanScore){
-    console.log("You lose!");
+    console.log(`💻 Computer wins the game! Final score: ${humanScore} - ${computerScore}`);
   }else{
-    console.log("That was a tie!");
+    console.log(`🤝 It's a tie! Final score: ${humanScore} - ${computerScore}`);
   }
 
 }
